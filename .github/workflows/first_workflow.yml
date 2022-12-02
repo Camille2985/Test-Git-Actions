@@ -1,16 +1,25 @@
 name: My first workflow
-inputs:
-  production_ready:
-    description: 'Is this this code ready for production?'
-    required: false
-    default: false
-  message:
-    description: 'What do should this script say to you'
-    required: true
-    default: 'Hello Camille Church'
 on:
   push:
+    inputs:
+      production_ready:
+        description: 'Is this this code ready for production?'
+        required: false
+        default: false
+      message:
+        description: 'What do should this script say to you'
+        required: true
+        default: 'Hello Camille Church'
   workflow_dispatch:
+    inputs:
+      production_ready:
+        description: 'Is this this code ready for production?'
+        required: false
+        default: false
+      message:
+        description: 'What do should this script say to you'
+        required: true
+        default: 'Hello Camille Church'
 
 jobs:
   build:
