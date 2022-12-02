@@ -1,7 +1,9 @@
 name: My first workflow
 on:
-  merge:
-    tags: 'prod'
+  pull_request:
+      types:
+        - closed
+      tags: "prod"
   workflow_dispatch:
 
 jobs:
