@@ -1,1 +1,3 @@
-print("Hello Camille, you figure this out, good job =)")
+import sys
+
+print(sys.argv[1])

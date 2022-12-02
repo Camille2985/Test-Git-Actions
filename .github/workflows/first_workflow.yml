@@ -3,13 +3,30 @@ on:
   pull_request:
       types:
         - closed
-      tags: "prod"
-  workflow_dispatch:
+      inputs:
+        production_ready:
+          description: 'Is this this code ready for production?'
+          required: false
+          default: false
+        message:
+          description: 'What do should this script say to you'
+          required: true
+          default: 'Hello Camille Church'
 
+  workflow_dispatch:
+    inputs:
+      production_ready:
+        description: 'Is this this code ready for production?'
+        required: false
+        default: false
+      message:
+        description: 'What do should this script say to you'
+        required: true
+        default: 'Hello Camille Church'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: python ./python_scripts/sample_python.py
+        run: python ./python_scripts/sample_python.py "Howdy There Camille"
