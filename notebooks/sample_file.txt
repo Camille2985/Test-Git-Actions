@@ -1,2 +1,4 @@
 This should trigger a github action on commit
 hello
+
+ok, so i just added a tag, lets see if this works
