@@ -15,7 +15,6 @@ jobs:
 
       - name: Get Changed Files
         id: changed-files
-          uses: tj-actions/changed-files@v34
           with:
             files: |
               notebooks/**
