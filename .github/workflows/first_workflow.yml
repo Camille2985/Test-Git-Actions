@@ -1,28 +1,19 @@
 name: My first workflow
+author: camille2985@berkeley.edu
+description: this is my attempt to learn how to make github actions
+inputs:
+  production_ready:
+    description: 'Is this this code ready for production?'
+    required: false
+    default: false
+  message:
+    description: 'What do should this script say to you'
+    required: true
+    default: 'Hello Camille Church'
 on:
-  pull_request:
-      types:
-        - closed
-      inputs:
-        production_ready:
-          description: 'Is this this code ready for production?'
-          required: false
-          default: false
-        message:
-          description: 'What do should this script say to you'
-          required: true
-          default: 'Hello Camille Church'
-
+  push:
   workflow_dispatch:
-    inputs:
-      production_ready:
-        description: 'Is this this code ready for production?'
-        required: false
-        default: false
-      message:
-        description: 'What do should this script say to you'
-        required: true
-        default: 'Hello Camille Church'
+
 jobs:
   build:
     runs-on: ubuntu-latest
