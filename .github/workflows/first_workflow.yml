@@ -4,7 +4,7 @@ on:
     paths:
       - 'notebooks/**'
     tags:
-      - 'prod'
+      - 'prod**'
   workflow_dispatch:
 
 jobs:
