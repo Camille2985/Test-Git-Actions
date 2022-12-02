@@ -1,9 +1,8 @@
 name: My first workflow
 on:
   push:
-    inputs:
-      paths:
-        - '/notebooks'
+    paths:
+      - '/notebooks'
   workflow_dispatch:
     inputs:
       production_ready:
@@ -21,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: python ./python_scripts/sample_python.py "${{inputs.message}}"
+        run: python ./python_scripts/sample_python.py "Test"
