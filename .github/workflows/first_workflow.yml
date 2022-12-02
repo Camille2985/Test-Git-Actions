@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: python ./python_scripts/sample_python.py "Test"
+        run: python ./python_scripts/sample_python.py {{$on.push.paths}}
