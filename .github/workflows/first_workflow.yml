@@ -13,12 +13,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Get changed files
+          id: changed-files
+          uses: tj-actions/changed-files@v34
+
       - name: Get Changed Files
-        id: changed-files
+        id:  changed-files-specific
+          uses: tj-actions/changed-files@v34
           with:
             files: |
               notebooks/**
 
       - name: Run python script
-        if: steps.changed-files.outputs.any_changed == 'true'
-        run: python ./python_scripts/sample_python.py "${{ steps.changed-files.outputs.all_changed_files }}"
+        if: steps. changed-files-specific.outputs.any_changed == 'true'
+        run: python ./python_scripts/sample_python.py "${{ steps. changed-files-specific.outputs.all_changed_files }}"
