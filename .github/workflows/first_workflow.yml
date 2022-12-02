@@ -1,6 +1,4 @@
 name: My first workflow
-  author: camille2985@berkeley.edu
-  description: this is my attempt to learn how to make github actions
 inputs:
   production_ready:
     description: 'Is this this code ready for production?'
