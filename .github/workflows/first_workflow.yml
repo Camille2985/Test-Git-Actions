@@ -2,7 +2,7 @@ name: My first workflow
 on:
   push:
     paths:
-      - '/notebooks/**'
+      - 'notebooks/**'
   workflow_dispatch:
     inputs:
       production_ready:
