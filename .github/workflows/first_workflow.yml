@@ -4,8 +4,6 @@ on:
     inputs:
       paths:
         - '/notebooks'
-      tags:
-        - 'prod'
   workflow_dispatch:
     inputs:
       production_ready:
